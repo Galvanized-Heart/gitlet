@@ -1,0 +1,33 @@
+## Gitlet:
+Gitlet is a simplified version control software similar to git.
+### Usage:
+- java gitlet.Main init
+  - Creates a hidden gitlet directory to store commit history and file versions.
+- java gitlet.Main add <filename>
+  - Updates staging area to add current file version.
+- java gitlet.Main rm <filename>
+  - Updates staging area to remove current file.
+- java gitlet.Main commit <commit message>
+  - Uses staging area to save changes made to files (additions or removals).
+- java gitlet.Main log
+  - Prints out all commits (with their metadata) starting at HEAD commit.
+- java gitlet.Main global-log
+  - Prints out all commits (with their metadata).
+- java gitlet.Main find <commit message>
+  - Prints out all commits whom have the specified commit message.
+- java gitlet.Main status
+  - Shows changes made to the staging area.
+- java gitlet.Main checkout -- <filename>
+  - Restores version of specified file from the parent commit.
+- java gitlet.Main checkout <commit ID> -- <filename>
+  - Restores version of specified file from the specified commit.
+- java gitlet.Main checkout <branch name>
+  - Restores all files from the commit at the end of the specified branch.
+- java gitlet.Main reset <commit ID>
+  - Restores all files from the specified commit.
+- java gitlet.Main branch <branch name>
+  - Creates a new branch with specified name.
+- java gitlet.Main rm-branch <branch name>
+  - Removes a branch if the specified name exists.
+- java gitlet.Main merge <branch name>
+  - Merges files from the specified branch to the current branch and creates a new commit as a result. Merge conflicts are recorded within files.
